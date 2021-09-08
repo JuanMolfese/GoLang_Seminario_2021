@@ -1,15 +1,29 @@
 package main
 
 import (
+	"errors"
 	"fmt"
+	"strings"
 	"tp_mod/model"
 )
 
-func main() {
-	c, err := model.NewChain("TX04SABCD")
-	if err != nil {
-		fmt.Println("Error :", err)
-		return
+func AnaliceChain(r *model.Chain) (bool, error) {
+	if r.Length == (strings.Count(r.Value, "") - 1) {
+		return true, nil
+	} else {
+		return false, errors.New("la cadena ingresada no es correcta, revise la documentacion")
 	}
-	fmt.Println(c)
+}
+
+func main() {
+	c := model.NewChain("TX04SC")
+
+	b, err := AnaliceChain(&c)
+
+	if b && err == nil {
+		fmt.Println(c)
+	} else {
+		fmt.Println("Error :", err)
+	}
+
 }

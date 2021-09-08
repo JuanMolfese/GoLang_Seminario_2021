@@ -2,6 +2,6 @@ package main
 
 import "testing"
 
-func Test(t *testing.T) {
+func TestNewChain(t *testing.T) {
 
 }
