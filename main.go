@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	c, err := model.NewChain("TX04FESABC")
+	c, err := model.NewChain("TX04SABCD")
 	if err != nil {
 		fmt.Println("Error :", err)
 		return

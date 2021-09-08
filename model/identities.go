@@ -18,7 +18,7 @@ type Chain struct {
 }
 
 func AnaliceChain(r Chain) bool {
-	return r.Length == (strings.Count(r.Value, " ") - 1)
+	return r.Length == (strings.Count(r.Value, "") - 1)
 }
 
 func NewChain(c string) (Chain, error) {
