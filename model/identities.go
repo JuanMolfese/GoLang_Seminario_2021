@@ -1,27 +1,36 @@
 package model
 
-import "reflect"
+import (
+	"errors"
+	"strconv"
+	"strings"
+)
+
+const (
+	MAXTYPE  int = 2
+	MAXVALUE int = 2
+)
 
 type Chain struct {
 	Type   string
-	Value  string
 	Length int
+	Value  string
 }
 
-func NewChain(c string) Chain {
+func AnaliceChain(r Chain) bool {
+	return r.Length == (strings.Count(r.Value, " ") - 1)
+}
+
+func NewChain(c string) (Chain, error) {
 	var r Chain
 
-	for i := 0; i < 2; i++ {
-		d = reflect.ValueOf(c[i])
-		r.Type = reflect.Indirect(d)
+	r.Type = c[:MAXTYPE]
+	d := c[MAXTYPE:(MAXTYPE + MAXVALUE)]
+	l, _ := strconv.Atoi(d)
+	r.Length = l
+	r.Value = c[(MAXTYPE + MAXVALUE):]
+	if AnaliceChain(r) {
+		return r, nil
 	}
-	for i := 2; i < 4; i++ {
-		e := reflect.ValueOf(c[i])
-		r.Length = reflect.Indirect(e).FieldByName("Length")
-	}
-	for i := 4; i < len(c); i++ {
-		f := reflect.ValueOf(c[i])
-		r.Value = reflect.Indirect(f).FieldByName("Value")
-	}
-	return r
+	return r, errors.New("La cadena ingresada no es correcta, revise la documentacion")
 }
