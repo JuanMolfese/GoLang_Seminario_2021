@@ -1,0 +1,7 @@
+mode: set
+tp_mod/main.go:10.49,11.50 1 1
+tp_mod/main.go:11.50,13.3 1 1
+tp_mod/main.go:13.8,15.3 1 0
+tp_mod/main.go:18.13,23.21 3 0
+tp_mod/main.go:23.21,25.3 1 0
+tp_mod/main.go:25.8,27.3 1 0
