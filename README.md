@@ -32,4 +32,4 @@ Type = NN
 Length = 04
 Value = 0001
 
-**Propuesta:** 
+**Resolución:** 
