@@ -4,7 +4,8 @@ import (
 	"errors"
 	"fmt"
 	"strings"
-	"tp_mod/model"
+
+	"tp_mod.com/model"
 )
 
 func AnaliceChain(r *model.Chain) (bool, error) {
@@ -16,7 +17,7 @@ func AnaliceChain(r *model.Chain) (bool, error) {
 }
 
 func main() {
-	c := model.NewChain("TX04SC")
+	c := model.NewChain("TX04SC$$")
 
 	b, err := AnaliceChain(&c)
 

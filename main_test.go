@@ -2,8 +2,8 @@ package main
 
 import (
 	"testing"
-	"tp_mod/model"
-	//"github.com/stretchr/testify/assert"
+
+	"tp_mod.com/model"
 )
 
 func TestAnaliceChain(t *testing.T) {
@@ -11,8 +11,5 @@ func TestAnaliceChain(t *testing.T) {
 	_, err := AnaliceChain(&c)
 	if (c.Type == "CF" && c.Length == 4 && c.Value == "POLI" && err != nil) || (c.Type != "CF" || c.Length != 4 || c.Value != "POLI" && err == nil) {
 		t.Error("La funcion AnaliceChain no esta funcionando bien")
-
 	}
 }
-
-//assert.Equal(t, "valor1", "valor2", "Error XXXXXX")

@@ -1,0 +1,8 @@
+mode: set
+tp_mod.com/main.go:11.49,12.50 1 1
+tp_mod.com/main.go:12.50,14.3 1 1
+tp_mod.com/main.go:14.8,16.3 1 0
+tp_mod.com/main.go:19.13,24.21 3 0
+tp_mod.com/main.go:24.21,26.3 1 0
+tp_mod.com/main.go:26.8,28.3 1 0
+tp_mod.com/model/chain_gest.go:18.31,26.2 7 1
