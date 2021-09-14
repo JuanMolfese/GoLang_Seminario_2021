@@ -55,7 +55,7 @@
 			<div id="nav">
 				<select id="files">
 				
-				<option value="file0">tp_mod.com/main.go (25.0%)</option>
+				<option value="file0">tp_mod.com/main.go (37.5%)</option>
 				
 				<option value="file1">tp_mod.com/model/chain_gest.go (100.0%)</option>
 				
@@ -84,7 +84,7 @@ import (
 func AnaliceChain(r *model.Chain) (bool, error) <span class="cov8" title="1">{
         if r.Length == (strings.Count(r.Value, "") - 1) </span><span class="cov8" title="1">{
                 return true, nil
-        }</span> else<span class="cov0" title="0"> {
+        }</span> else<span class="cov8" title="1"> {
                 return false, errors.New("la cadena ingresada no es correcta, revise la documentacion")
         }</span>
 }
