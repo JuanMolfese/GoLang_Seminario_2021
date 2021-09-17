@@ -1,7 +1,9 @@
 package model
 
 import (
+	"errors"
 	"strconv"
+	"strings"
 )
 
 const (
@@ -23,4 +25,12 @@ func NewChain(c string) Chain {
 	r.Length = l
 	r.Value = c[(MAXTYPE + MAXLENGTH):]
 	return r
+}
+
+func AnaliceChain(r *Chain) (bool, error) {
+	if r.Length == (strings.Count(r.Value, "") - 1) {
+		return true, nil
+	} else {
+		return false, errors.New("la cadena ingresada no es correcta, revise la documentacion")
+	}
 }
