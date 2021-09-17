@@ -27,8 +27,13 @@ func NewChain(c string) Chain {
 	return r
 }
 
+func IsNumber(c string) bool {
+	_, err := strconv.Atoi(c)
+	return err == nil
+}
+
 func AnaliceChain(r *Chain) (bool, error) {
-	if r.Length == (strings.Count(r.Value, "") - 1) {
+	if ((strings.ToUpper(r.Type) == "TX" && !IsNumber(r.Value)) || (strings.ToUpper(r.Type) == "NN" && IsNumber(r.Value))) && (r.Length == (strings.Count(r.Value, "") - 1)) {
 		return true, nil
 	} else {
 		return false, errors.New("la cadena ingresada no es correcta, revise la documentacion")
