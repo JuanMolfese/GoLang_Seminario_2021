@@ -34,9 +34,9 @@ Value = 0001
 
 **Resolución:** 
 
-Generamos un archivo en el que desarrollamos una función que dado un string, genera una estructura. Primero declaramos un struct de tipo "Chain", y dicha función toma el string y asigna la cantidad de caracteres definidos como constantes a cada atributo del struct (Type, Lenght y Value), utilizando esas constantes para establecer indices de comienzo y fnal de caracteres a asignar a cada atributo.
-Luego retornamos el resultado de dicha función y se lo asignamos a una variable.
-En el mismo main, generamos una función que analiza si el string recibido cumple con los requisitos necesarios para conformar una estructura de tipo "Chain"
-Finalmente, generamos dos archivos de testing, uno para la función "AnaliceChain" del main, y otro para testear la función "NewChain", encargada de recibir el string y trasnformarla en un struct de tipo "Chain".
+Generamos un archivo en el que desarrollamos una función que dado un string, genera una estructura. Primero declaramos un struct de tipo "Chain", y dicha función toma el string y asigna la cantidad de caracteres definidos como constantes a cada atributo del struct (Type, Lenght), utilizando esas constantes para establecer indices de comienzo y final de caracteres a asignar a cada atributo.
+Luego retornamos el resultado de dicha función y se lo asignamos a una variable del tipo de la estructura.
+En el mismo archivo, generamos una función que analiza si el string recibido cumple con los requisitos necesarios para conformar una estructura de tipo "Chain"
+Finalmente, generamos un archivo de testing para la función "AnaliceChain" y para testear la función "NewChain", encargada de recibir el string y trasnformarlo en un struct de tipo "Chain".
 El test de "AnaliceChain", chequea la coincidencia de los caracteres de cada atributo del struct, la coincidencia del largo de la cadena del atributo "Value", y que el error sea nulo o no en consecuencia.
 Por otro lado, el test de la funcion "NewChain" chequea la coincidencia de caracteres y la asignacion de los mismos a cada atributo del struct
