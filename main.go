@@ -7,11 +7,11 @@ import (
 )
 
 func main() {
-	c := model.NewChain("NN041234")
+	c, err := model.NewChain("NN041234")
 
-	b, err := model.AnaliceChain(&c)
+	//_, err := model.analiceChain(&c)
 
-	if b && err == nil {
+	if err == nil {
 		fmt.Println(c)
 	} else {
 		fmt.Println("Error :", err)
