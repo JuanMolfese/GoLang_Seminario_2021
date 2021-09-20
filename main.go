@@ -7,10 +7,7 @@ import (
 )
 
 func main() {
-	c, err := model.NewChain("TX06ABCDE")
-
-	//_, err := model.analiceChain(&c)
-
+	c, err := model.NewChain("TX06ABCDEF")
 	if err == nil {
 		fmt.Println(c)
 	} else {

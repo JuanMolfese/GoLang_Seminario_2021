@@ -27,6 +27,8 @@ func TestNewChain(t *testing.T) {
 		assert.Equal(t, err == nil, testData.Success)
 		if err != nil {
 			assert.Equal(t, testData.Type, r.Type)
+			assert.Equal(t, testData.Value, r.Value)
+			assert.Equal(t, testData.Length, r.Length)
 		}
 
 	}
