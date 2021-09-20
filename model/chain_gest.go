@@ -13,17 +13,17 @@ const (
 
 type Chain struct {
 	Type   string
-	Length int
 	Value  string
+	Length int
 }
 
 func analiceChain(r Chain) (Chain, error) {
-	if (!IsNumber(r.Value) && (strings.ToUpper(r.Type) == "TX")) ||
-		(IsNumber(r.Value) && (strings.ToUpper(r.Type) == "NN")) &&
-			(r.Length == (strings.Count(r.Value, "")-1)) {
+	if ((!IsNumber(r.Value) && (strings.ToUpper(r.Type) == "TX")) ||
+		(IsNumber(r.Value) && (strings.ToUpper(r.Type) == "NN"))) &&
+		(r.Length == (strings.Count(r.Value, "") - 1)) {
 		return r, nil
 	} else {
-		return r, errors.New("la cadena ingresada no es correcta, revise la documentacion")
+		return Chain{"", "", 0}, errors.New("la cadena ingresada no es correcta, revise la documentacion")
 	}
 }
 

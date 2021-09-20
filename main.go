@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	c, err := model.NewChain("NN041234")
+	c, err := model.NewChain("TX06ABCDE")
 
 	//_, err := model.analiceChain(&c)
 
